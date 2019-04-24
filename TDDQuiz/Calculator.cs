@@ -12,5 +12,13 @@ namespace TDDQuiz
         {
             return 0;
         }
+
+        public static int[] StringToIntList(string expression)
+        {
+            string[] splitted = expression.Split(',');
+            int[] nums = new int[splitted.Length];
+
+            return nums;
+        }
     }
 }

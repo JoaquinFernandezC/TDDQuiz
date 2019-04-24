@@ -13,6 +13,7 @@ namespace TDDQuizTesting
             Assert.AreEqual(0, Calculator.Add(""));
         }
 
+        [TestMethod]
         public void StringToIntListTest()
         {
             int[] numbers = {1, 2, 3, 4};
