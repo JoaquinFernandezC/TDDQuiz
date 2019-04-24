@@ -17,7 +17,7 @@ namespace TDDQuizTesting
         public void StringToIntListTest()
         {
             int[] numbers = {1, 2, 3, 4};
-            CollectionAssert.AreEqual(numbers, Calculator.StringToIntList("1,2,3,4"));
+            CollectionAssert.AreEqual(numbers, Calculator.StringToIntList("1,2,3,4", ','));
         }
 
         [TestMethod]
@@ -30,7 +30,7 @@ namespace TDDQuizTesting
         public void DelimitersTest()
         {
             int[] numbers = { 1, 2, 3, 4 };
-            CollectionAssert.AreEqual(numbers, Calculator.StringToIntList("1;2;3;4"));
+            CollectionAssert.AreEqual(numbers, Calculator.StringToIntList("1;2;3;4", ';'));
         }
     }
 }

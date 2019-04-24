@@ -13,7 +13,7 @@ namespace TDDQuiz
             int result = 0;
             if (expression.Length > 0)
             {
-                int[] numbers = StringToIntList(expression);
+                int[] numbers = StringToIntList(expression, ',');
                 foreach (var item in numbers)
                 {
                     result += item;
@@ -22,9 +22,9 @@ namespace TDDQuiz
             return result;
         }
 
-        public static int[] StringToIntList(string expression)
+        public static int[] StringToIntList(string expression, char delimiter)
         {
-            string[] splitted = expression.Split(',');
+            string[] splitted = expression.Split(delimiter);
             int[] numbers = Array.ConvertAll(splitted, int.Parse);
             return numbers;
         }
