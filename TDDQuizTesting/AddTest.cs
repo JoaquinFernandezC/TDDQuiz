@@ -10,7 +10,7 @@ namespace TDDQuizTesting
         [TestMethod]
         public void EmptyStringTest()
         {
-            Assert.Equals(0, Calculator.Add(""));
+            Assert.AreEqual(0, Calculator.Add(""));
         }
     }
 }
