@@ -18,6 +18,11 @@ namespace TDDQuiz
             string[] splitted = expression.Split(',');
             int[] nums = new int[splitted.Length];
 
+            for (int i = 0; i < splitted.Length; i++)
+            {
+                nums[i] = int.Parse(splitted[i]);
+            }
+
             return nums;
         }
     }
