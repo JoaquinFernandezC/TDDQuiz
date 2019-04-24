@@ -12,5 +12,11 @@ namespace TDDQuizTesting
         {
             Assert.AreEqual(0, Calculator.Add(""));
         }
+
+        public void StringToIntListTest()
+        {
+            int[] numbers = {1, 2, 3, 4};
+            CollectionAssert.AreEqual(numbers, Calculator.StringToIntList("1,2,3,4"));
+        }
     }
 }
