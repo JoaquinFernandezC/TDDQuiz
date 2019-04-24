@@ -8,9 +8,9 @@ namespace TDDQuizTesting
     public class AddTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void EmptyStringTest()
         {
-
+            Assert.Equals(0, Calculator.Add(""));
         }
     }
 }

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace TDDQuiz
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
 
         }
+
     }
 }
