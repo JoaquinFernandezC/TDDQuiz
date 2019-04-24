@@ -28,9 +28,10 @@ namespace TDDQuiz
         public static int[] StringToIntList(string expression)
         {
             char delimiter= ',';
-            if (!char.IsDigit(delimiter))
+            if (!char.IsDigit(expression[0]))
             {
                 delimiter = expression[0];
+                expression = expression.Substring(1);
             }
             string[] splitted = expression.Split(delimiter);
             int[] numbers = Array.ConvertAll(splitted, int.Parse);
