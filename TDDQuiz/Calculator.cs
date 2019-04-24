@@ -16,7 +16,10 @@ namespace TDDQuiz
                 int[] numbers = StringToIntList(expression, delimiter);
                 foreach (int number in numbers)
                 {
-                    result += number;
+                    if (number > 0)
+                    {
+                        result += number;
+                    }                  
                 }
             }
             return result;
