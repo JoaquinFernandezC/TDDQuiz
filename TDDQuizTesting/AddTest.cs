@@ -10,7 +10,7 @@ namespace TDDQuizTesting
         [TestMethod]
         public void EmptyStringTest()
         {
-            Assert.AreEqual(0, Calculator.Add(""));
+            Assert.AreEqual(0, Calculator.Add("",' '));
         }
 
         [TestMethod]
@@ -23,7 +23,7 @@ namespace TDDQuizTesting
         [TestMethod]
         public void AddNumbersTest()
         {
-            Assert.AreEqual(7, Calculator.Add("1,2,3,1"));
+            Assert.AreEqual(7, Calculator.Add("1,2,3,1", ','));
         }
 
         [TestMethod]
@@ -31,6 +31,12 @@ namespace TDDQuizTesting
         {
             int[] numbers = { 1, 2, 3, 4 };
             CollectionAssert.AreEqual(numbers, Calculator.StringToIntList("1;2;3;4", ';'));
+        }
+
+        [TestMethod]
+        public void IgnoreNegativeTest()
+        {
+            Assert.AreEqual(6, Calculator.Add("1,2,3,-1", ','));
         }
     }
 }
