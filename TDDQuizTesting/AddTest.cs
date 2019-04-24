@@ -25,5 +25,12 @@ namespace TDDQuizTesting
         {
             Assert.AreEqual(7, Calculator.Add("1,2,3,1"));
         }
+
+        [TestMethod]
+        public void DelimitersTest()
+        {
+            int[] numbers = { 1, 2, 3, 4 };
+            CollectionAssert.AreEqual(numbers, Calculator.StringToIntList("1;2;3;4"));
+        }
     }
 }
