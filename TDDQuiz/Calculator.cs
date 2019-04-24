@@ -8,15 +8,15 @@ namespace TDDQuiz
 {
     public class Calculator
     {
-        public static int Add(string expression)
+        public static int Add(string expression, char delimiter)
         {
             int result = 0;
             if (expression.Length > 0)
             {
-                int[] numbers = StringToIntList(expression, ',');
-                foreach (var item in numbers)
+                int[] numbers = StringToIntList(expression, delimiter);
+                foreach (int number in numbers)
                 {
-                    result += item;
+                    result += number;
                 }
             }
             return result;
