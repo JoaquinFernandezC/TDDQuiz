@@ -8,9 +8,18 @@ namespace TDDQuiz
 {
     public class Calculator
     {
-        public static int Add(string numbers)
+        public static int Add(string expression)
         {
-            return 0;
+            int result = 0;
+            if (expression.Length > 0)
+            {
+                int[] numbers = StringToIntList(expression);
+                foreach (var item in numbers)
+                {
+                    result += item;
+                }
+            }
+            return result;
         }
 
         public static int[] StringToIntList(string expression)
